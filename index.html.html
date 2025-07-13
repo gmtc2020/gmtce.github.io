@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GMTC Ethiopia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+    
+    header {
+      background-color: #0066cc;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    
+    nav {
+      background-color: #004d99;
+      padding: 15px;
+      text-align: center;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover {
+      background-color: #003366;
+    }
+    
+    section {
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 1000px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: none;
+    }
+    
+    section.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    h2 {
+      color: #0066cc;
+      border-bottom: 2px solid #ff6600;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    
+    h3 {
+      color: #004d99;
+      margin: 20px 0 10px;
+    }
+    
+    p, li {
+      margin-bottom: 15px;
+    }
+    
+    ul, ol {
+      padding-left: 20px;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var navLinks = document.querySelectorAll('nav a');
+      var sections = document.querySelectorAll('section');
+
+      navLinks.forEach(function(link, index) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          sections.forEach(function(section) {
+            section.classList.remove('active');
+          });
+          sections[index].classList.add('active');
+          
+          // Smooth scroll to section
+          window.scrollTo({
+            top: sections[index].offsetTop - 100,
+            behavior: 'smooth'
+          });
+        });
+      });
+      
+      // Show first section by default
+      sections[0].classList.add('active');
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>GMTC Ethiopia</h1>
+  </header>
+  <nav>
+    <a href="#about-us">About Us</a>
+    <a href="#training-programs">Training Programs</a>
+    <a href="#dona-engineering">DONA Engineering</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ALL YOUR ORIGINAL CONTENT REMAINS EXACTLY THE SAME -->
+  <section id="about-us" class="active">
+    <h2>About Us</h2>
+    <p>GMTC Ethiopia is a leading provider of comprehensive training, education, and engineering services based in Addis Ababa, Ethiopia. The institute was founded with a vision by Eng. Mathewos Hadero Gutena to reach people in regional towns and rural parts of the country with accessible and high-quality training programs.</p>
+    <p>Eng. Mathewos Hadero Gutena, the founder of GMTC Ethiopia, holds a BSc degree in Electrical and Computer Engineering and an MSc degree in Electrical Power System and Energy Engineering in addition MSc in business administration and also project management are on the way. Prior to founding GMTC, he had more than six years of training experience in the University and more than two years of leadership experience in the government sector.</p>
+    <p>To bring his vision of mobile and accessible training to life, Eng. Mathewos established GMTC Ethiopia in 2020 with a team of other engineers from country and abroad. The institute is now a leading provider of comprehensive training, education, and engineering services, serving clients across the country.</p>
+    <p>GMTC Ethiopia's offerings include a wide range of training programs in electrical engineering, renewable energy systems, and other technical fields. Additionally, the institute has a specialized subsidiary called DONA Engineering Design and Consulting, which provides expert consulting, design, and installation services for electrical and solar power projects.</p>
+    <p>Through its innovative approach and commitment to empowering communities across Ethiopia, GMTC Ethiopia is playing a vital role in advancing technical skills, promoting sustainable energy solutions, and driving the country's development in the engineering and infrastructure sectors.</p>
+  </section>
+
+  <section id="training-programs">
+    <h2>Our Training Programs</h2>
+    <ol>
+      <li>
+        <h3>Biblical Truth</h3>
+        <p>Our Biblical Truth training program focuses on helping individuals deepen their understanding of the Bible and apply its principles to their daily lives. This includes studying key passages, exploring theological concepts, and developing a stronger relationship with God.</p>
+      </li>
+      <li>
+        <h3>Leadership Development</h3>
+        <p>The Leadership Development program at GMTC Ethiopia equips individuals with the skills and mindset needed to become effective leaders in their communities, businesses, and organizations. This includes training in communication, decision-making, problem-solving, and strategic planning.</p>
+      </li>
+      <li>
+        <h3>Community Development</h3>
+        <p>Our Community Development training program is designed to empower individuals and organizations to create positive change in their local communities. This includes workshops on project management, grant writing, and community outreach.</p>
+      </li>
+      <li>
+        <h3>Entrepreneurship</h3>
+        <p>The Entrepreneurship program at GMTC Ethiopia provides aspiring business owners with the knowledge and skills needed to start and grow successful enterprises. This includes training in market analysis, financial management, and business planning.</p>
+      </li>
+      <li>
+        <h3>Technical Skills</h3>
+        <p>We offer a range of technical skills training programs, including courses in computer programming, graphic design, and electrical engineering. These programs are designed to equip individuals with the practical skills needed to thrive in the modern workforce.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="dona-engineering">
+    <h2>DONA Engineering Design and Consulting</h2>
+    <p>GMTC Ethiopia is a diversified conglomerate with several specialized subsidiaries. One of these subsidiaries is DONA Engineering Design and Consulting, which provides expert engineering and consulting services for electrical and solar power projects.</p>
+    <p>DONA Engineering Design and Consulting offers the following services:</p>
+    <ul>
+      <li>Expert consulting services for electrical system design, installation, and maintenance</li>
+      <li>Training programs on electrical engineering and solar system design</li>
+      <li>Design and engineering of solar photovoltaic (PV) systems, including grid-tied and off-grid solutions</li>
+      <li>Installation and commissioning of solar PV systems for residential, commercial, and industrial applications</li>
+      <li>Maintenance and troubleshooting of existing solar and electrical systems</li>
+      <li>Sales and distribution of high-quality electrical materials and solar components</li>
+    </ul>
+    <p>DONA Engineering Design and Consulting's team of experienced engineers and technicians work closely with clients to develop customized solutions that meet their specific energy requirements and budget constraints. As part of the GMTC group, DONA Engineering Design and Consulting is committed to promoting sustainable energy practices and supporting the growth of renewable energy infrastructure in Ethiopia.</p>
+    <p>In addition to their core engineering services, DONA Engineering Design and Consulting also offers building electrical and solar system design and installation. Our experts can provide comprehensive assessments of your building's electrical needs and design tailored solutions to improve energy efficiency, reduce costs, and integrate renewable energy sources. We handle all aspects of the installation process, from permitting and procurement to commissioning and testing, to ensure your new electrical or solar system is functional and compliant with local regulations.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>GMTC Ethiopia<br>
+    Addis Ababa, Ethiopia<br>
+    Phone: +251 916 481 871<br>
+    Email: hamatthew218@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 GMTC Ethiopia. All rights reserved.</p>
+  </footer>
+</body>
+</html>
